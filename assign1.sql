@@ -18,3 +18,5 @@ WHERE Full_name='john';
 SET SQL_SAFE_UPDATES = 1;
 select * from demography
 WHERE Age is null;
+# for deleting 
+Delete from demography;
