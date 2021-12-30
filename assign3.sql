@@ -666,5 +666,8 @@ select substring(fname,1,3) as firstname,substring(lname,length(lname)-2,3) as l
 select * from individual
 where length(fname)=5;
 
+select cust_id,count(cust_id),max(avail_balance),avg(avail_balance) from account
+group by cust_id
+having cust_id=1;
 
 
