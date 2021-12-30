@@ -661,3 +661,10 @@ select year(birth_date),month(birth_date),day(birth_date),weekday(birth_date) fr
 
 select substring("Please find the substring in this string",17,15) as str;
 
+select substring(fname,1,3) as firstname,substring(lname,length(lname)-2,3) as lastname from individual;
+
+select * from individual
+where length(fname)=5;
+
+
+
