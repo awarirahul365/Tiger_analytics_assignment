@@ -658,6 +658,9 @@ select cust_id as customer_ID,count(cust_id) as Accounts_open from account
 group by cust_id
 having Accounts_open>2;
 
+select birth_date,fname from individual
+order by birth_date DESC;
+
 
 
 
