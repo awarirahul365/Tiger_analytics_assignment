@@ -661,7 +661,9 @@ having Accounts_open>2;
 select birth_date,fname from individual
 order by birth_date DESC;
 
-
+select product_cd,max(pending_balance) from account
+group by product_cd
+having product_cd='CHK' or product_cd='SAV' or product_cd='CD';
 
 
 
