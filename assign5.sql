@@ -658,12 +658,14 @@ select p.name,pt.name from product as p
 left join product_type as pt
 on p.product_type_cd=pt.product_type_cd;
 
-select f.fname,f.lname,e.superior_emp_id from employee as e
-inner join employee as f
-on e.emp_id=f.superior_emp_id;
+select e1.fname as curr,e1.lname,e2.fname,e2.lname from employee as e1
+inner join employee as e2
+on e1.superior_emp_id=e2.emp_id;
 
 select fname,lname from employee
 where superior_emp_id=(select emp_id from employee where fname='Susan' and lname='Hawthorne');
 
 SELECT distinct e2.fname,e2.lname
 FROM employee e1 inner join employee e2 on e1.superior_emp_id=e2.emp_id WHERE e1.dept_id=1;
+
+
