@@ -665,3 +665,5 @@ on e.emp_id=f.superior_emp_id;
 select fname,lname from employee
 where superior_emp_id=(select emp_id from employee where fname='Susan' and lname='Hawthorne');
 
+SELECT distinct e2.fname,e2.lname
+FROM employee e1 inner join employee e2 on e1.superior_emp_id=e2.emp_id WHERE e1.dept_id=1;
